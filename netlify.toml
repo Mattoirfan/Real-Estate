@@ -1,0 +1,20 @@
+# Netlify Configuration for EstateNova
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA Fallback: Ensures /properties, /services, /account, /admin, etc. resolve properly
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"

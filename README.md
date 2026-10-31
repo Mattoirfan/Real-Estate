@@ -98,8 +98,35 @@ For seamless reviewer testing, the Auth Modal includes 1-click instant login but
 
 ---
 
-## 4. Local Development
+## 4. Netlify Deployment Guide
 
+This project is fully pre-configured for Netlify with `netlify.toml` and `public/_redirects` (ensuring all client-side routes like `/properties`, `/properties/:slug`, `/services`, `/account`, and `/admin` resolve without 404s).
+
+### Option 1: Git-Connected Continuous Deployment (Recommended)
+1. Push your repository to **GitHub**, **GitLab**, or **Bitbucket**.
+2. Log into [Netlify](https://app.netlify.com) and click **"Add new site"** → **"Import an existing project"**.
+3. Select your repository. Netlify automatically detects `netlify.toml`:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
+4. Click **"Deploy site"**. Your site will be live on a `*.netlify.app` domain.
+
+### Option 2: Netlify CLI
+```bash
+# 1. Build the production bundle
+npm run build
+
+# 2. Deploy directly to Netlify
+npx netlify-cli deploy --prod --dir=dist
+```
+
+### Option 3: Netlify Drag-and-Drop
+1. Run `npm run build` to generate the production `dist/` directory.
+2. Go to [https://app.netlify.com/drop](https://app.netlify.com/drop).
+3. Drag and drop the `dist/` folder onto the page.
+
+---
+
+## 5. Local Development
 ```bash
 # Install dependencies
 npm install
