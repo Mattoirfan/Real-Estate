@@ -1,0 +1,6 @@
+{
+  "name": "EstateNova – Luxury Real Estate & Membership Platform",
+  "description": "Discover curated luxury properties, premium residential & commercial listings, and exclusive membership tiers with EstateNova.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

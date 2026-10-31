@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-estate-navy: #0B132B;
+  --color-estate-navy-light: #1C2541;
+  --color-estate-navy-card: #151E3F;
+  --color-estate-gold: #C6A76A;
+  --color-estate-gold-hover: #B8934A;
+  --color-estate-gold-light: #F4EEDF;
+  --color-estate-ivory: #F8F7F3;
+  --color-estate-slate: #64748B;
+}
+
+:root {
+  --font-heading: 'Manrope', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAFAF8;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom scrollbar for modern editorial appearance */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F1EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #C6A76A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8934A;
+}

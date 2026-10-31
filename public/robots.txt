@@ -1,0 +1,21 @@
+# robots.txt for EstateNova
+User-agent: *
+Allow: /
+Allow: /properties
+Allow: /properties/*
+Allow: /services
+Allow: /about
+Allow: /contact
+Allow: /blog
+Allow: /blog/*
+Allow: /privacy
+Allow: /terms
+
+# Disallow private user accounts, admin backend, and checkout
+Disallow: /account
+Disallow: /account/*
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /api/*
+
+Sitemap: https://estatenova.com/sitemap.xml

@@ -1,0 +1,816 @@
+# MASTER PROMPT: PREMIUM REAL ESTATE WEBSITE WITH PROPERTY LISTINGS, MEMBERSHIPS, SEO & FULL-STACK BACKEND
+
+Act as a world-class real estate website designer, senior full-stack engineer, UI/UX architect, brand identity specialist, SEO strategist, database architect, and conversion optimization expert.
+
+Your task is to design and build a complete, premium, modern, production-oriented real estate business website. The website must combine exceptional visual design, professional property listings, advanced search and filtering, property details, membership subscription plans, secure customer accounts, payment integration, an admin dashboard, SEO optimization, and a properly connected backend.
+
+Do not create a basic template, static mockup, or disconnected collection of pages. Build a cohesive, fully navigable, responsive, and functional real estate platform with maintainable source code.
+
+The website should look like a premium international real estate brand, with an editorial design aesthetic, cinematic property photography, sophisticated typography, excellent spacing, polished interactions, and an intuitive customer experience.
+
+Use the temporary brand name "EstateNova" throughout the project. Make the brand name, logo, contact details, currency, location, properties, membership plans, and other business information configurable.
+
+---
+
+## 1. PROJECT OBJECTIVE
+
+Build a real estate platform that allows visitors to:
+
+- Discover residential and commercial properties.
+- Browse properties for sale and rent.
+- Search and filter listings.
+- View detailed property information and photographs.
+- Save favorite properties.
+- Contact property agents.
+- Submit property enquiries.
+- Create an account and manage their profile.
+- Purchase a membership plan.
+- Access membership-specific benefits.
+- Manage their subscription or one-time purchase.
+- Access appropriate features based on their membership.
+- Allow authorized administrators to manage properties, customers, enquiries, plans, and memberships.
+
+The website must be suitable for a real estate agency, property consultancy, property listing business, or a membership-based real estate platform.
+
+Clearly distinguish between properties offered directly by the business and third-party listings where applicable.
+
+## 2. WEBSITE PAGES AND ROUTES
+
+Create the following separate, fully functional pages with proper routing and cross-linking.
+
+### Page 1: Home — /
+
+Create a visually stunning homepage that introduces the brand and drives property enquiries and membership purchases.
+
+Include:
+
+- Premium navigation header with custom logo.
+- Hero section with a large real estate photograph.
+- Headline such as "Find a Place That Moves You."
+- Supporting copy focused on buying, renting, and discovering properties.
+- Prominent search bar with location, property type, transaction type, and price range.
+- Primary CTA: "Explore Properties".
+- Secondary CTA: "List Your Property".
+- Featured property listings with high-quality photographs.
+- New and recently added properties, when actual listing data exists.
+- Property categories such as apartments, villas, houses, plots, and commercial spaces.
+- A "Why Choose EstateNova?" section.
+- A visual explanation of the property discovery process.
+- Membership plan preview with a link to Services & Memberships.
+- Featured locations and neighborhood highlights.
+- Genuine testimonials or clearly labeled demo testimonials.
+- Real estate insights and latest articles.
+- Frequently asked questions.
+- Final CTA for contacting an agent or joining the membership program.
+- Comprehensive footer.
+
+Make the hero visually distinctive, with a strong composition, readable text, elegant typography, and a responsive layout.
+
+### Page 2: Properties / Listings — /properties
+
+Build a dedicated property discovery page.
+
+Include:
+
+- Property search bar.
+- Sale, rent, and other supported transaction filters.
+- Location and neighborhood filters.
+- Minimum and maximum price.
+- Property type.
+- Number of bedrooms and bathrooms.
+- Minimum and maximum area.
+- Furnishing status, where applicable.
+- Amenities and property features.
+- Sort by newest, price ascending, price descending, and relevance.
+- Grid and list view options.
+- Pagination or accessible load-more functionality.
+- Property count based on actual query results.
+- Clear-all-filters action.
+- Loading, empty, and error states.
+- Property cards with photographs, price, location, bedrooms, bathrooms, area, and listing status.
+- Favorite or save-property action for authenticated users.
+- Clear buttons for viewing details and contacting the agent.
+
+Filters must actually update the displayed results through the backend or a properly implemented data layer.
+
+Use URL query parameters for shareable search results, for example:
+
+/properties?type=rent&location=London&minPrice=500&maxPrice=2000
+
+Never fabricate live availability or claim that a property is available unless the stored listing status supports that claim.
+
+### Page 3: Property Details — /properties/[slug]
+
+Create a dedicated dynamic page for every property.
+
+Include:
+
+- Large image gallery.
+- Main featured photograph.
+- Image thumbnails and lightbox.
+- Property title and full location.
+- Sale price or rental price.
+- Property type and listing status.
+- Bedrooms, bathrooms, floor area, and other relevant facts.
+- Detailed description.
+- Amenities and specifications.
+- Floor plan or downloadable brochure when provided.
+- Map integration when the address and mapping provider are configured.
+- Neighborhood information where supported by reliable data.
+- Agent profile and contact information.
+- Enquiry form.
+- Schedule-a-viewing request.
+- Save-to-favorites button.
+- Similar properties.
+- Share-property action.
+- Membership-related features when appropriate.
+
+Use real database records to generate property detail pages. Return a proper not-found page for invalid slugs.
+
+Protect contact details and any membership-restricted information according to the actual business rules. Do not invent property specifications, addresses, agent credentials, or neighborhood statistics.
+
+### Page 4: Services & Memberships — /services
+
+Create a dedicated services and membership page.
+
+Divide the page into two clear areas.
+
+A. Real Estate Services
+
+Include service cards for:
+
+- Property buying assistance.
+- Property rental assistance.
+- Property selling support.
+- Property listing promotion.
+- Property management.
+- Real estate consultation.
+- Premium listing exposure.
+- Property viewing assistance.
+
+Describe each service, its benefits, and its relevant CTA. Only advertise services the business can actually provide.
+
+B. Membership Plans
+
+Create an attractive pricing section with four initial sample plans:
+
+Plan 1: Starter — $99
+
+- One-time payment.
+- Basic account access.
+- Limited property favorites.
+- Basic property discovery tools.
+- Standard enquiry access.
+
+Plan 2: Plus — $149
+
+- One-time payment.
+- All Starter features.
+- Additional saved properties.
+- Enhanced search and filtering.
+- Membership profile badge.
+
+Plan 3: Premium — $199
+
+- Monthly subscription.
+- All eligible Plus features.
+- Premium property alerts.
+- Enhanced listing discovery.
+- Priority support, if supported by the business.
+
+Plan 4: Elite — $499
+
+- Monthly subscription.
+- All eligible Premium features.
+- Enhanced listing visibility or promotional credits, if supported.
+- Advanced property discovery tools.
+- Priority enquiry handling, if supported.
+- Additional premium benefits configurable by an administrator.
+
+These prices are illustrative examples, not confirmed business prices. Store all prices, billing intervals, benefits, currencies, and feature limits in a centralized database or configuration.
+
+Do not assume that all four plans are subscriptions. Clearly label one-time payments and recurring monthly subscriptions separately.
+
+For every plan, display:
+
+- Plan name.
+- Price and currency.
+- Billing interval.
+- Included features.
+- Applicable limits.
+- Membership eligibility.
+- A prominent purchase CTA.
+- Renewal or expiration terms.
+- Cancellation and refund information where applicable.
+
+Make the pricing layout visually polished, easy to compare, and responsive. Highlight a recommended plan without misleading customers.
+
+Most importantly, membership plans must have real functionality. Purchasing a plan must update the user's membership record and unlock the corresponding benefits.
+
+Do not implement a fake checkout or simply change the membership label in the browser.
+
+### Page 5: About Us — /about
+
+Create a premium brand storytelling page featuring:
+
+- Hero section with professional property imagery.
+- Company introduction.
+- Brand story and mission.
+- Vision and values.
+- Real estate expertise and approach.
+- Team members and agent profiles.
+- Customer service philosophy.
+- How the platform helps property buyers, renters, sellers, and investors.
+- Verified achievements and credentials, when supplied.
+- CTA linking to Properties, Services, or Contact.
+
+Use editable company content and genuine information. Do not invent company history, employee identities, transaction volumes, certifications, or awards.
+
+### Page 6: Contact Us — /contact
+
+Create a professional contact page with:
+
+- Customer enquiry form.
+- Full name.
+- Email.
+- Phone number.
+- Enquiry category.
+- Related property, when applicable.
+- Preferred contact method.
+- Message.
+- Appropriate validation and privacy notice.
+- Submission loading, success, and error states.
+- Configurable business address and opening hours.
+- Clickable phone and email links.
+- WhatsApp contact option when configured.
+- Map integration when a valid business location and provider are available.
+- Links to social media and other contact channels.
+
+Save enquiries securely in the database. Associate them with the relevant property, user, or agent when appropriate.
+
+Only display a success message after the enquiry has actually been accepted by the backend.
+
+### Page 7: Customer Account — /account
+
+Create a secure customer dashboard.
+
+Include:
+
+- Registration and login.
+- Email verification and password recovery.
+- Profile management.
+- Saved properties.
+- Enquiry history.
+- Membership plan details.
+- Current membership status.
+- Payment history.
+- Subscription renewal and expiration dates.
+- Subscription cancellation controls when applicable.
+- Billing and payment links provided by the payment provider.
+- Access to membership benefits.
+- Logout.
+
+Require authentication for private account pages. Enforce permissions on the server, not merely through frontend visibility.
+
+### Page 8: Admin Dashboard — /admin
+
+Create a protected administrative dashboard for authorized staff.
+
+Include:
+
+- Dashboard overview.
+- Property management.
+- Create, edit, publish, unpublish, and archive listings.
+- Property image management.
+- Property categories and locations.
+- Agent and team management.
+- Customer management.
+- Enquiry management.
+- Membership plan management.
+- Membership assignments and status.
+- Payment and subscription status views.
+- Blog and SEO content management.
+- Website contact and branding configuration.
+- Basic reporting and useful operational metrics.
+
+Include secure authentication and role-based authorization. Public users must never be able to access private customer information or administrative actions.
+
+If some advanced features cannot be fully implemented in the chosen environment, implement the core functionality first and document the remaining requirements honestly.
+
+### Page 9: Optional Blog & Insights — /blog
+
+Create a professional real estate content section.
+
+Include:
+
+- Blog listing page.
+- Article detail pages.
+- Featured article.
+- Categories and tags.
+- Author information.
+- Related articles.
+- Search-engine-friendly URLs.
+- Article metadata and social sharing.
+
+Use original placeholder articles clearly marked as demo content until genuine editorial content is provided.
+
+Also implement a custom 404 page, privacy policy, terms of service, and appropriate membership terms.
+
+---
+
+## 3. GLOBAL NAVIGATION AND INTERNAL LINKING
+
+Create a consistent global navigation system.
+
+Desktop header:
+
+- Logo.
+- Home.
+- Properties dropdown.
+- Services & Memberships.
+- About Us.
+- Contact Us.
+- Login / Account.
+- Prominent "Explore Properties" or "Get Started" CTA.
+
+The header may be sticky, with subtle styling changes on scroll.
+
+Mobile navigation must use a functional, accessible menu with appropriate touch targets.
+
+Implement the following navigation relationships:
+
+- Logo → Home.
+- Home → Properties.
+- Home → Services & Memberships.
+- Home → About Us.
+- Home → Contact Us.
+- Property cards → Their respective property detail pages.
+- Property details → Agent contact and related properties.
+- Services → Membership plans and purchase flow.
+- Membership plans → Checkout.
+- Successful purchase → Account dashboard.
+- Account → Saved properties, enquiries, and membership details.
+- Footer → All major pages and legal pages.
+- Blog articles → Related articles and relevant property categories.
+
+Use real routes and actual links. Avoid placeholder href values, broken navigation, and buttons that do nothing.
+
+Implement breadcrumbs where appropriate and maintain a logical internal linking structure throughout the website.
+
+---
+
+## 4. VISUAL DESIGN SYSTEM
+
+Create a distinctive premium real estate aesthetic.
+
+Suggested palette:
+
+- Deep midnight navy: #111827.
+- Warm ivory: #F8F7F3.
+- White: #FFFFFF.
+- Muted gold: #C6A76A.
+- Slate gray: #64748B.
+- Restrained green accents for relevant statuses.
+
+Use a consistent typography system, such as Manrope for headings and Inter for body text.
+
+Design requirements:
+
+- Cinematic property photography.
+- Editorial-style hero sections.
+- Balanced asymmetric layouts.
+- Premium property cards.
+- Refined image overlays.
+- Generous whitespace.
+- Clear visual hierarchy.
+- Consistent spacing and border radii.
+- Elegant pricing tables.
+- Smooth, restrained animations.
+- Subtle hover interactions.
+- Accessible forms and dropdowns.
+- Consistent icons using Lucide or an equivalent icon library.
+
+Use different layouts for different pages while maintaining a unified design language.
+
+Do not make every section look identical. Give the homepage, property listings, property detail page, membership page, and admin dashboard their own appropriate visual structures.
+
+Avoid excessive gradients, overused glassmorphism, oversized empty spaces, excessive animations, and generic AI-generated template aesthetics.
+
+---
+
+## 5. CUSTOM LOGO AND BRAND ASSETS
+
+Create an original vector logo for EstateNova.
+
+Use a refined geometric house, architectural outline, location pin, or abstract building symbol paired with a professional wordmark.
+
+Create:
+
+- Horizontal logo.
+- Compact logo icon.
+- Favicon.
+- Light-background version.
+- Dark-background version.
+
+Generate the logo using custom SVG code and store the source in the project.
+
+Keep the logo editable and ensure it works in the header, footer, mobile menu, account dashboard, and favicon.
+
+Do not use copyrighted logos or unrelated brand assets.
+
+---
+
+## 6. SPLASH AI PROPERTY IMAGERY
+
+Use Splash AI, where available, to obtain or generate dummy property photographs for the website.
+
+Create a consistent image collection featuring:
+
+- Luxury modern houses.
+- Contemporary apartments.
+- Premium villas.
+- Urban penthouses.
+- Commercial office spaces.
+- Residential interiors.
+- Modern kitchens and living rooms.
+- Property exteriors.
+- Real estate agents.
+- Neighborhood and architectural photography.
+
+Image direction:
+
+Photorealistic, high-end real estate photography, realistic lighting, elegant composition, natural materials, professional interior photography, accurate architectural proportions, and premium editorial presentation.
+
+Use wide landscape images for hero sections and suitable aspect ratios for listing cards.
+
+Organize assets into folders such as:
+
+- public/images/hero/
+- public/images/properties/
+- public/images/interiors/
+- public/images/agents/
+- public/images/neighborhoods/
+
+Use meaningful filenames, optimized formats, responsive image sizes, and descriptive alt text.
+
+When generated images are used as sample property photographs, label the corresponding listings as demonstration or sample listings. Do not imply that fictional properties are real or available for purchase.
+
+If direct Splash AI integration is unavailable, prepare image-generation prompts and use legally usable placeholder assets. Do not invent API endpoints or claim automated image generation is working without verification.
+
+---
+
+## 7. PROPERTY DATA MODEL
+
+Design a structured property database.
+
+Suggested property fields:
+
+- id.
+- title.
+- slug.
+- description.
+- transaction_type.
+- property_type.
+- price.
+- currency.
+- rental_billing_period, when applicable.
+- address.
+- city.
+- region.
+- country.
+- latitude and longitude, when available.
+- bedrooms.
+- bathrooms.
+- area.
+- area_unit.
+- amenities.
+- image_urls.
+- agent_id.
+- listing_status.
+- featured_status.
+- published_at.
+- created_at.
+- updated_at.
+
+Use appropriate validation, relationships, indexes, and nullable fields.
+
+Support multiple photographs per property.
+
+Clearly distinguish sample listings from real listings. Store listing visibility and availability status in the database.
+
+Use slugs for readable property URLs.
+
+---
+
+## 8. MEMBERSHIP AND SUBSCRIPTION SYSTEM
+
+Implement a genuine membership system integrated with authentication, database records, and a payment provider.
+
+Membership functionality must include:
+
+- Plan selection.
+- One-time purchases.
+- Monthly subscriptions.
+- Secure checkout.
+- Payment confirmation.
+- Membership activation.
+- Membership expiration.
+- Recurring subscription status.
+- Cancellation and renewal handling.
+- Payment history.
+- Membership feature access.
+- Upgrade and downgrade flows where supported.
+- Failed-payment handling.
+- Duplicate-payment protection.
+- Refund handling according to configured business policies.
+
+Create appropriate database tables for:
+
+- Membership plans.
+- Customer memberships.
+- Payment transactions.
+- Subscription references.
+- Membership feature entitlements.
+
+Store monetary amounts using integer minor units or another appropriate exact-money representation, together with an explicit currency.
+
+Do not store raw card details.
+
+Use a suitable payment provider such as Stripe or Razorpay, depending on the business's country, supported payment methods, currency, and account eligibility.
+
+Use hosted checkout or the provider's recommended secure integration.
+
+Verify payment status on the server using trusted provider responses and signed webhooks. Never activate a membership solely because the browser redirects to a success page.
+
+Make webhook processing idempotent, securely verify signatures, and protect against duplicate or replayed events.
+
+Keep payment credentials and webhook secrets on the server in environment variables.
+
+Clearly explain how to configure test mode and production mode.
+
+If payment credentials are missing, implement the integration structure and provide setup instructions. Label checkout as unconfigured rather than pretending that payments work.
+
+---
+
+## 9. MEMBERSHIP ACCESS CONTROL
+
+Membership benefits must be controlled by verified server-side entitlements.
+
+For example:
+
+- Starter: basic account and configured basic feature limits.
+- Plus: enhanced search features and additional saved-property limits.
+- Premium: configured premium alerts and enhanced discovery.
+- Elite: configured advanced features and promotional benefits.
+
+All features and limits must be configurable by an authorized administrator.
+
+The system must check membership status, billing interval, expiration, and relevant entitlements before allowing access to restricted functionality.
+
+Do not rely on hiding buttons or displaying a premium badge as the only access-control mechanism.
+
+Clearly communicate plan benefits, limitations, renewal terms, cancellation policies, and whether payment is recurring or one-time.
+
+Do not promise increased property sales, guaranteed investment returns, or guaranteed listing exposure unless the business can substantiate the claim.
+
+---
+
+## 10. BACKEND TECHNOLOGY
+
+Preferred stack:
+
+- Next.js App Router.
+- TypeScript.
+- React.
+- Tailwind CSS.
+- Supabase.
+- PostgreSQL.
+- Secure server-side route handlers or Server Actions.
+- Zod validation.
+- A supported payment provider.
+- An appropriate email delivery provider for transactional messages.
+
+Use the platform's supported equivalents if the environment requires another stack.
+
+Implement:
+
+- Authentication and authorization.
+- Database migrations.
+- Secure API endpoints.
+- Server-side validation.
+- Image upload and storage.
+- Property search and filtering.
+- Customer enquiry handling.
+- Membership management.
+- Payment webhooks.
+- Error handling.
+- Rate limiting.
+- Spam protection.
+- Secure logging without leaking secrets.
+- Appropriate database indexes.
+- Environment-variable configuration.
+
+Use Row Level Security or equivalent database access controls. Public visitors must not be able to read private user profiles, enquiries, payment records, or administrative information.
+
+Never expose secret keys, service-role keys, or private API credentials in client-side code.
+
+---
+
+## 11. SEO AND LOCAL SEARCH OPTIMIZATION
+
+Implement comprehensive technical, on-page, and local SEO.
+
+Include:
+
+- Unique title tags for every page.
+- Compelling meta descriptions.
+- Canonical URLs.
+- Open Graph metadata.
+- Social sharing metadata.
+- XML sitemap.
+- Robots.txt.
+- Clean, readable URLs.
+- Breadcrumb navigation.
+- Proper heading hierarchy.
+- Semantic HTML.
+- Descriptive image alt text.
+- Optimized internal linking.
+- Property-specific metadata.
+- Location-specific pages only when they provide useful, genuine content.
+- Relevant structured data for real estate agency, organization, property listings, and articles where appropriate.
+- Indexing controls for account, admin, checkout, and private pages.
+- Appropriate noindex directives for private or low-value routes.
+
+Do not add fake reviews, fake addresses, fabricated prices, false property availability, or unsupported business details to structured data.
+
+Avoid creating thin or duplicated location pages simply to target keywords.
+
+Build the website around relevant search intent such as property for sale, houses for rent, apartments, commercial property, and the actual locations served by the business.
+
+---
+
+## 12. PERFORMANCE OPTIMIZATION
+
+Optimize the website for speed, reliability, and maintainability.
+
+Requirements:
+
+- Responsive image delivery.
+- WebP or AVIF where supported.
+- Appropriate image dimensions.
+- Lazy loading for below-the-fold imagery.
+- Prioritized loading for the primary hero image.
+- Optimized fonts.
+- Minimal unnecessary JavaScript.
+- Server rendering or static generation where appropriate.
+- Efficient database queries.
+- Pagination for property listings.
+- Caching strategies that do not expose private data or serve stale membership permissions.
+- Avoid layout shifts.
+- Accessible loading and error states.
+
+Target strong Core Web Vitals and good Lighthouse performance scores without sacrificing essential functionality.
+
+---
+
+## 13. ACCESSIBILITY AND RESPONSIVENESS
+
+Build mobile-first and test the website at small, medium, and large screen sizes.
+
+Implement:
+
+- Responsive grids.
+- Mobile navigation.
+- Touch-friendly controls.
+- Keyboard-accessible menus.
+- Visible focus states.
+- Accessible forms.
+- Meaningful validation errors.
+- Appropriate contrast.
+- Reduced-motion support.
+- Semantic page structure.
+- Accessible dialogs and image galleries.
+- WCAG 2.2 AA as the accessibility target.
+
+Ensure that property filters, pricing cards, membership checkout, and account dashboards work on mobile.
+
+---
+
+## 14. CONTENT AND TRUST
+
+Use professional, natural, customer-focused copy.
+
+For demonstration content:
+
+- Clearly label sample properties.
+- Clearly label fictional testimonials.
+- Use placeholder contact information.
+- Mark example prices as illustrative.
+- Avoid false certifications and achievements.
+- Avoid misleading property availability claims.
+
+Provide centralized configuration so real business information can replace sample content easily.
+
+Include appropriate privacy, terms, membership, cancellation, and refund information. Clearly explain the limits of any property or investment-related service.
+
+---
+
+## 15. PROJECT STRUCTURE AND CODE QUALITY
+
+Use modular, reusable components and clear separation of concerns.
+
+Organize the project into:
+
+- App routes and page components.
+- Shared navigation and footer.
+- Design system and reusable UI components.
+- Property cards and galleries.
+- Search and filtering components.
+- Membership and pricing components.
+- Authentication pages.
+- Customer dashboard.
+- Admin dashboard.
+- Database schema and migrations.
+- Server-side validation.
+- Payment integration.
+- Webhook handlers.
+- Image assets.
+- SEO utilities.
+- Configuration.
+- Tests.
+- Documentation.
+
+Use TypeScript types, predictable naming conventions, proper error handling, and reusable business logic.
+
+Avoid duplicated code, giant components, hardcoded secrets, unnecessary dependencies, dead links, and nonfunctional controls.
+
+---
+
+## 16. TESTING AND QUALITY ASSURANCE
+
+Before declaring the project complete, verify:
+
+1. All pages load correctly.
+2. All navigation links work.
+3. Property listings come from the data layer.
+4. Property filters return correct results.
+5. Property details resolve using their slugs.
+6. Customer enquiries are saved securely.
+7. Authentication and password recovery work when configured.
+8. Membership entitlements are enforced server-side.
+9. Test-mode payments are verified through the payment provider.
+10. Webhooks update membership status correctly.
+11. Duplicate webhook events do not create duplicate transactions.
+12. Expired or canceled memberships no longer receive benefits when applicable.
+13. Unauthorized users cannot access admin data.
+14. Images load correctly and are optimized.
+15. Mobile and desktop layouts work correctly.
+16. SEO metadata and indexing rules are correct.
+17. Available build, type, and automated tests pass.
+18. Errors and incomplete integrations are documented honestly.
+
+Do not claim that a feature has been tested if it has not been tested.
+
+---
+
+## 17. FINAL DELIVERABLES
+
+Deliver a complete project containing:
+
+- All implemented website pages.
+- Working navigation and internal linking.
+- Custom SVG logo and favicon.
+- Property listing and property detail system.
+- Search and filtering functionality.
+- Membership pricing and entitlement system.
+- Secure payment integration structure.
+- Customer authentication and account dashboard.
+- Admin dashboard.
+- Database schema and migrations.
+- Sample property data clearly marked as demo content.
+- Available image assets and Splash AI image-generation prompts.
+- Environment-variable example file.
+- SEO configuration.
+- Responsive design system.
+- Automated tests where practical.
+- A comprehensive README.
+- Local development instructions.
+- Database setup instructions.
+- Payment provider configuration instructions.
+- Image and brand customization instructions.
+- Deployment instructions.
+- A list of unfinished integrations and required credentials.
+
+## FINAL EXECUTION INSTRUCTIONS
+
+Start by establishing the design system, application architecture, database schema, and reusable components.
+
+Then implement the homepage, property listings, property details, services and memberships, About Us, Contact Us, customer account, and admin dashboard.
+
+After implementing the pages, integrate the backend, authentication, membership entitlements, and payment workflow. Complete the SEO and performance improvements, then run the available tests and fix the issues found.
+
+Prioritize visual excellence, professional real estate branding, excellent user experience, genuine functionality, secure membership handling, search visibility, performance, and maintainable code.
+
+The final result must look like a premium, professionally built real estate business platform rather than a generic AI-generated website.
+
+Build the actual application and its source code wherever the environment permits. Do not stop after providing a plan, wireframe, or static visual mockup. If credentials, external services, or manual configuration are required, explain precisely what remains to be done and never misrepresent an incomplete integration as functional.
